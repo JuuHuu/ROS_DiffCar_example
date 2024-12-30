@@ -1,0 +1,45 @@
+[0.005s] Invoking command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/juu/Desktop/Personal_WS/ROS_project/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/juu/Desktop/Personal_WS/ROS_project/install/robot_description
+[0.040s] -- The C compiler identification is GNU 13.3.0
+[0.071s] -- The CXX compiler identification is GNU 13.3.0
+[0.082s] -- Detecting C compiler ABI info
+[0.133s] -- Detecting C compiler ABI info - done
+[0.138s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.138s] -- Detecting C compile features
+[0.138s] -- Detecting C compile features - done
+[0.144s] -- Detecting CXX compiler ABI info
+[0.198s] -- Detecting CXX compiler ABI info - done
+[0.203s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.203s] -- Detecting CXX compile features
+[0.203s] -- Detecting CXX compile features - done
+[0.205s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.276s] -- Found Python3: /home/juu/anaconda3/bin/python3 (found version "3.12.7") found components: Interpreter 
+[0.345s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.406s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.406s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.406s] -- Added test 'lint_cmake' to check CMake code style
+[0.406s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.407s] -- Added test 'xmllint' to check XML markup files
+[0.408s] -- Configuring done (0.4s)
+[0.409s] -- Generating done (0.0s)
+[0.410s] -- Build files have been written to: /home/juu/Desktop/Personal_WS/ROS_project/build/robot_description
+[0.412s] Invoked command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/juu/Desktop/Personal_WS/ROS_project/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/juu/Desktop/Personal_WS/ROS_project/install/robot_description
+[0.413s] Invoking command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/juu/Desktop/Personal_WS/ROS_project/build/robot_description -- -j20 -l20
+[0.435s] Invoked command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/juu/Desktop/Personal_WS/ROS_project/build/robot_description -- -j20 -l20
+[0.440s] Invoking command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/juu/Desktop/Personal_WS/ROS_project/build/robot_description
+[0.447s] -- Install configuration: ""
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/environment/path.sh
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/environment/path.dsv
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/local_setup.bash
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/local_setup.sh
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/local_setup.zsh
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/local_setup.dsv
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/package.dsv
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[0.447s] -- Installing: /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/package.xml
+[0.448s] Invoked command in '/home/juu/Desktop/Personal_WS/ROS_project/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/juu/Desktop/Personal_WS/ROS_project/build/robot_description
