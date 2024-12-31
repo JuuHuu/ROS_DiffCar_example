@@ -1,0 +1,566 @@
+<sdf version="1.6">
+    <model name="my_diff_car" canonical_link='base_footprint'>
+        <static>false</static>
+        <link name="base_footprint"></link>
+        <link name="base_link">
+            <pose relative_to='base_footprint'>0 0 0.1 0 0 0</pose>
+            <visual name='base_link visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>0.12</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0.004391442035325718 0.34191442489801843 0.4969329950515914 1</ambient>
+                    <diffuse>0.004391442035325718 0.34191442489801843 0.4969329950515914 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='base_link collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>0.12</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass>200</mass>
+                <inertia>
+                    <ixx>66.66666666666666</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>100</iyy>
+                    <iyz>0</iyz>
+                    <izz>66.66666666666666</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_footprint_to_base_link" type="fixed">
+            <pose relative_to='base_link'>0 0 0 0 0 0 </pose>
+            <parent>base_footprint</parent>
+            <child>base_link</child>
+        </joint>
+        <link name="imu">
+            <pose relative_to='base_link'>0 0 0 0 0 0</pose>
+            <visual name='imu visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+                <material>
+                    <ambient>0.7454042095350284 0.010960094003125918 0.01764195448412081 1</ambient>
+                    <diffuse>0.7454042095350284 0.010960094003125918 0.01764195448412081 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='imu collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.16666666666666666</ixx>imu
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.16666666666666666</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.16666666666666666</izz>
+                </inertia>
+            </inertial>
+
+            <sensor name="imu" type="imu">
+                <always_on>true</always_on>
+                <update_rate>100</update_rate>
+                <topic>imu</topic>
+                <imu>
+                    <angular_velocity>
+                        <x>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </x>
+                        <y>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </y>
+                        <z>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </z>
+                    </angular_velocity>
+                    <linear_acceleration>
+                        <x>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </x>
+                        <y>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </y>
+                        <z>
+                            <noise type="gaussian">
+                                <mean>0</mean>
+                                <stddev>0</stddev>
+                            </noise>
+                        </z>
+                    </linear_acceleration>
+                </imu>
+            </sensor>
+        </link>
+        <joint name="base_link_to_imu" type="fixed">
+            <pose relative_to='imu'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>imu</child>
+        </joint>
+        <link name="camera">
+            <pose relative_to='imu'>0.1 0 0.07 0 0 0</pose>
+            <visual name='camera visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.02 0.1 0.02</size>
+                    </box>
+                </geometry>
+                <material>
+                    <ambient>0.09084171117479915 0.45641102317066595 0.04518620437910499 1</ambient>
+                    <diffuse>0.09084171117479915 0.45641102317066595 0.04518620437910499 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='camera collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.02 0.1 0.02</size>
+                    </box>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.16666666666666666</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.16666666666666666</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.16666666666666666</izz>
+                </inertia>
+            </inertial>
+
+            <sensor name="camera_camera" type="rgbd_camera">
+                <always_on>true</always_on>
+                <visualize>true</visualize>
+                <update_rate>100</update_rate>
+                <topic>camera</topic>
+                <gz_frame_id>camera</gz_frame_id>
+                <camera name="camera_camera">
+                    <camera_info_topic>camera/camera_info</camera_info_topic>
+                    <horizontal_fov>1.3962634</horizontal_fov>
+                    <image>
+                        <width>800</width>
+                        <height>600</height>
+                        <format>R8G8B8</format>
+                    </image>
+                    <clip>
+                        <near>0.1</near>
+                        <far>100</far>
+                    </clip>
+                    <noise>
+                        <type>gaussian</type>
+                        <mean>0</mean>
+                        <stddev>0.007</stddev>
+                    </noise>
+                </camera>
+            </sensor>
+        </link>
+        <joint name="base_to_camera" type="fixed">
+            <pose relative_to='camera'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>camera</child>
+        </joint>
+        <link name="lidar_support">
+            <pose relative_to='base_link'>0 0 0.1 0 0 0</pose>
+            <visual name='lidar_support visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.01</radius>
+                        <length>0.1</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0.6038273388475408 0.036889450395083165 0.5972017883558645 1</ambient>
+                    <diffuse>0.6038273388475408 0.036889450395083165 0.5972017883558645 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='lidar_support collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.01</radius>
+                        <length>0.1</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.3333333333333333</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.5</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.3333333333333333</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_link_to_lidar_support" type="fixed">
+            <pose relative_to='lidar_support'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>lidar_support</child>
+        </joint>
+        <link name="lidar">
+            <pose relative_to='lidar_support'>0 0 0.05199988046616394 0 0 0</pose>
+            <visual name='lidar visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.03</radius>
+                        <length>0.01</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0.3231432091022285 0.85499260812105 0.24620132669705552 1</ambient>
+                    <diffuse>0.3231432091022285 0.85499260812105 0.24620132669705552 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='lidar collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.03</radius>
+                        <length>0.01</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.3333333333333333</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.5</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.3333333333333333</izz>
+                </inertia>
+            </inertial>
+
+            <sensor name="lidar_lidar" type="gpu_lidar">
+                <always_on>true</always_on>
+                <visualize>true</visualize>
+                <pose>-0.064 0 0.121 0 0 0</pose>
+                <update_rate>5</update_rate>
+                <topic>scan</topic>
+                <gz_frame_id>lidar</gz_frame_id>
+                <lidar>
+                    <scan>
+                        <horizontal>
+                            <samples>360</samples>
+                            <resolution>1</resolution>
+                            <min_angle>0</min_angle>
+                            <max_angle>6.28</max_angle>
+                        </horizontal>
+                    </scan>
+                    <range>
+                        <min>0.12</min>
+                        <max>3.5</max>
+                        <resolution>0.015</resolution>
+                    </range>
+                    <noise>
+                        <type>gaussian</type>
+                        <mean>0</mean>
+                        <stddev>0.01</stddev>
+                    </noise>
+                </lidar>
+            </sensor>
+        </link>
+        <joint name="lidar_support_to_lidar" type="fixed">
+            <pose relative_to='lidar'>0 0 0 0 0 0 </pose>
+            <parent>lidar_support</parent>
+            <child>lidar</child>
+        </joint>
+        <link name="left_wheel">
+            <pose relative_to='base_link'>0 0.15 -0.06 -1.5707963267948963 0 0</pose>
+            <visual name='left_wheel visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.04</radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0.023153366173251363 0.3515325994898463 0.026241221889696346 1</ambient>
+                    <diffuse>0.023153366173251363 0.3515325994898463 0.026241221889696346 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='left_wheel collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.04</radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>20.0</mu>
+                            <mu2>20.0</mu2>
+                            <kp>1000000000.0</kp>
+                            <kd>1.0</kd>
+                            <fdir1>0 0 0</fdir1>
+                            <slip1>0.0</slip1>
+                            <slip2>0.0</slip2>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.3333333333333333</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.5</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.3333333333333333</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_link_to_left_wheel" type="revolute">
+            <pose relative_to='left_wheel'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>left_wheel</child>
+            <axis>
+                <xyz expressed_in='left_wheel'>0 0 1</xyz>
+            </axis>
+        </joint>
+        <link name="right_wheel">
+            <pose relative_to='base_link'>0 -0.15 -0.06 -1.5707963267948963 0 0</pose>
+            <visual name='right_wheel visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.04</radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <ambient>0.023153366173251363 0.3515325994898463 0.026241221889696346 1</ambient>
+                    <diffuse>0.023153366173251363 0.3515325994898463 0.026241221889696346 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='right_wheel collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.04</radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>20.0</mu>
+                            <mu2>20.0</mu2>
+                            <kp>1000000000.0</kp>
+                            <kd>1.0</kd>
+                            <fdir1>0 0 0</fdir1>
+                            <slip1>0.0</slip1>
+                            <slip2>0.0</slip2>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.3333333333333333</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.5</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.3333333333333333</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_link_to_right_wheel" type="revolute">
+            <pose relative_to='right_wheel'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>right_wheel</child>
+            <axis>
+                <xyz expressed_in='right_wheel'>0 0 1</xyz>
+            </axis>
+        </joint>
+        <link name="front_chaster">
+            <pose relative_to='base_link'>0.06 0 -0.06 0 0 0</pose>
+            <visual name='front_chaster visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.04</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                    <ambient>0.7083757798856457 0.04373502925049377 0.00030352698352941176 1</ambient>
+                    <diffuse>0.7083757798856457 0.04373502925049377 0.00030352698352941176 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='front_chaster collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.04</radius>
+                    </sphere>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>00</mu>
+                            <mu2>0.0</mu2>
+                            <kp>1000000000.0</kp>
+                            <kd>1.0</kd>
+                            <fdir1>0 0 0</fdir1>
+                            <slip1>0.0</slip1>
+                            <slip2>0.0</slip2>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.4</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.4</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.4</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_link_to_front_chaster" type="fixed">
+            <pose relative_to='front_chaster'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>front_chaster</child>
+        </joint>
+        <link name="back_chaster">
+            <pose relative_to='base_link'>-0.06 0 -0.06 0 0 0</pose>
+            <visual name='back_chaster visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.04</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                    <ambient>0.7083757798856457 0.04373502925049377 0.00030352698352941176 1</ambient>
+                    <diffuse>0.7083757798856457 0.04373502925049377 0.00030352698352941176 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+            </visual>
+            <collision name='back_chaster collision'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <sphere>
+                        <radius>0.04</radius>
+                    </sphere>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>00</mu>
+                            <mu2>0.0</mu2>
+                            <kp>1000000000.0</kp>
+                            <kd>1.0</kd>
+                            <fdir1>0 0 0</fdir1>
+                            <slip1>0.0</slip1>
+                            <slip2>0.0</slip2>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.4</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.4</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.4</izz>
+                </inertia>
+            </inertial>
+        </link>
+        <joint name="base_link_to_back_chaster" type="fixed">
+            <pose relative_to='back_chaster'>0 0 0 0 0 0 </pose>
+            <parent>base_link</parent>
+            <child>back_chaster</child>
+        </joint>
+        
+        <ros2_control name="robot" type="system">
+            <hardware>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </hardware>
+            <joint name="base_link_to_right_wheel">
+                <command_interface name="velocity"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="base_link_to_left_wheel">
+                <command_interface name="velocity"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+        </ros2_control>
+
+        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system">
+            <parameters>PARAMETERS_CONFIG_FILE_PLACEHOLDER</parameters>
+        </plugin>
+    </model>
+</sdf>

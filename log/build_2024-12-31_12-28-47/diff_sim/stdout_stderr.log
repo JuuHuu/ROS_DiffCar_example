@@ -1,0 +1,26 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim.launch.py
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim_control_gz.launch.py
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim_control_mock.launch.py
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/bridge_config.yaml
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/bridge_config_control_gz.yaml
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/diff_drive_controller.yaml
+-- Symlinking: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/diff_drive_controller_mock.yaml
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/rviz_config.rviz
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/worlds/empty.world
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/ament_index/resource_index/package_run_dependencies/diff_sim
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/ament_index/resource_index/parent_prefix_path/diff_sim
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/environment/path.sh
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/environment/path.dsv
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/local_setup.bash
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/local_setup.sh
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/local_setup.zsh
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/local_setup.dsv
+-- Symlinking: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/package.dsv
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/ament_index/resource_index/packages/diff_sim
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/cmake/diff_simConfig.cmake
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/cmake/diff_simConfig-version.cmake
+-- Up-to-date symlink: /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/package.xml

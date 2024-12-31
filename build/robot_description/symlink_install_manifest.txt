@@ -2,6 +2,8 @@
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/config/rviz_config.rviz
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/sdf/my_diff_car.gltf
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/sdf/my_diff_car.sdf
+/home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/sdf/my_diff_car_control_gz.sdf
+/home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/sdf/my_diff_car_control_mock.sdf
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
 /home/juu/Desktop/Personal_WS/ROS_project/install/robot_description/share/robot_description/environment/ament_prefix_path.sh

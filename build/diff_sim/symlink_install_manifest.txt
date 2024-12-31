@@ -1,5 +1,10 @@
 /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim.launch.py
+/home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim_control_gz.launch.py
+/home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/launch/sim_control_mock.launch.py
 /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/bridge_config.yaml
+/home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/bridge_config_control_gz.yaml
+/home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/diff_drive_controller.yaml
+/home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/diff_drive_controller_mock.yaml
 /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/config/rviz_config.rviz
 /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/diff_sim/worlds/empty.world
 /home/juu/Desktop/Personal_WS/ROS_project/install/diff_sim/share/ament_index/resource_index/package_run_dependencies/diff_sim
