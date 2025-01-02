@@ -1,1 +1,0 @@
-/home/juu/Desktop/Personal_WS/ROS_project/build/diff_sim/ament_cmake_environment_hooks/local_setup.zsh

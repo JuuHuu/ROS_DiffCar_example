@@ -1,1 +1,0 @@
-/home/juu/Desktop/Personal_WS/ROS_project/src/robot_description/launch/preview.launch.py
